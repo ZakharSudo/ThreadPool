@@ -32,10 +32,13 @@ Idle timeout (если > core)
 bash
 # Клонирование (или просто скопировать файлы)
 git clone https://github.com/ZakharSudo/ThreadPool.git
+
 cd CustomThreadPool 
+
 
 # Компиляция
 javac CustomThreadPool.java Main.java
+
 
 # Запуск демонстрации
 java Main
