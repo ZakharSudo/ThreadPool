@@ -26,13 +26,13 @@ Idle timeout (если > core)
 Завершение
 
 
-## 🚀 Быстрый старт
+##  Быстрый старт
 ### Установка
-```bash
 
+bash
 # Клонирование (или просто скопировать файлы)
-git clone 
-cd CustomThreadPool
+git clone https://github.com/ZakharSudo/ThreadPool.git
+cd CustomThreadPool 
 
 # Компиляция
 javac CustomThreadPool.java Main.java
@@ -113,21 +113,21 @@ Task 6 → Queue #1 → Worker-2
 
 Политики отказа
 Сравнение политик
-Политика	Поведение	Когда использовать	Риски
-ABORT	Бросает RejectedExecutionException	Критичные задачи, нельзя потерять	Задача не выполнится
-CALLER_RUNS	Выполняет в потоке caller'а	Надёжность важнее скорости	Замедление caller'а
-DISCARD	Молча игнорирует задачу	Неважные задачи, метрики	Потеря данных
-DISCARD_OLDEST	Удаляет старейшую задачу	Real-time системы	Потеря старых данных
+Политика	    Поведение	                        Когда использовать	                Риски
+ABORT	        Бросает RejectedExecutionException	Критичные задачи, нельзя потерять	Задача не выполнится
+CALLER_RUNS	    Выполняет в потоке caller'а        	Надёжность важнее скорости	        Замедление caller'а
+DISCARD	Молча   игнорирует задачу	                Неважные задачи, метрики	        Потеря данных
+DISCARD_OLDEST	Удаляет старейшую задачу	        Real-time системы	                Потеря старых данных
 
 
 Анализ производительности
 Сравнение с ThreadPoolExecutor
 Характеристика	    ThreadPoolExecutor	  CustomThreadPool
-Балансировка	      Одна очередь	        Множество очередей + RR
+Балансировка	    Одна очередь	      Множество очередей + RR
 Contention	        Высокий	              Низкий
-minSpareThreads	    -	                    +
+minSpareThreads	    -	                  +
 Гибкость настройки	Средняя	              Высокая
 Логирование	        Стандартное	          Расширенное
-Политики отказа	    4 стандартные	        4 кастомные
-Поддержка Scheduled	+	                    -
-Work Stealing	      -	                  -
+Политики отказа	    4 стандартные	      4 кастомные
+Поддержка Scheduled	+	                  -
+Work Stealing	    -	                  -
