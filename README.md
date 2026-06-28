@@ -1,3 +1,4 @@
+<pre style="font-family: inherit;">
 # ThreadPool
 Курсовая работа по многопоточному и асинхронному программированию. Часть 1
 
@@ -133,3 +134,4 @@ minSpareThreads	    -	                  +
 Поддержка Scheduled	+	                  -
 Work Stealing	    -	                  -
 
+</pre>
