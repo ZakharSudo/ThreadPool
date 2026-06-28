@@ -40,18 +40,6 @@ javac CustomThreadPool.java Main.java
 # Запуск демонстрации
 java Main
 
-
-Параметры настройки
-Подробное описание параметров
-Параметр	Тип	Описание	Рекомендации
-corePoolSize	int	Минимальное количество потоков	= N_CPU для CPU-bound, = N_CPU для IO-bound
-maxPoolSize	int	Максимальное количество потоков	= N_CPU для CPU-bound, = N_CPU*2 для IO-bound
-keepAliveTime	long	Время простоя перед завершением	30-60 сек для большинства сценариев
-timeUnit	TimeUnit	Единица измерения времени	TimeUnit.SECONDS или TimeUnit.MILLISECONDS
-queueSize	int	Размер очереди на поток	100-500 для средних нагрузок
-minSpareThreads	int	Минимальное число свободных потоков	1-2 для предотвращения холодного старта
-rejectedPolicy	RejectedPolicy	Политика при переполнении	CALLER_RUNS для надёжности
-
 Примеры конфигураций
 1. Для CPU-интенсивных задач (вычисления)
 java
